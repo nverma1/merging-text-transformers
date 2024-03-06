@@ -9,7 +9,7 @@ config = {
     ],
     'model': {
         'name': 'bert',
-        'dir': 'trained/multiberts/',
+        'dir': 'models/trained/multiberts/',
         'bases': []
     },
      'model_names': {

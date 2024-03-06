@@ -167,7 +167,7 @@ def main():
     parser.add_argument('--hf-model')
     parser.add_argument('--merged-model')
     parser.add_argument('--merged-model-dict')
-    parser.add_argument('--cache-dir', default='/checkpoint/nverma7/cache/')
+    parser.add_argument('--cache-dir')
     parser.add_argument('--tokenizer-name', default='google/multiberts-seed_0')
     parser.add_argument('--loss', action='store_true', required=False)
 
