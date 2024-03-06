@@ -109,6 +109,8 @@ def main():
             for j, metric in enumerate(metrics):
                 vanilla_lambda_lists[i][j].append(metric['eval_loss'])
 
+    if os.path.exists('results/glue') == False:
+        os.makedirs('results/glue')
     
     with open(f'results/glue/{args.outfile}.json', 'w+') as out:
         json.dump(vanilla_lambda_lists, out)

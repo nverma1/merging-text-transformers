@@ -209,7 +209,10 @@ def main():
                     vanilla_lambda_lists[i][0].append(wikitext_ppl_all(placeholder_tokenizer, placeholder_model, new_proj))
                 else:
                     vanilla_lambda_lists[i][0].append(wikitext_ppl(placeholder_tokenizer, placeholder_model))
-    
+
+    if os.path.exists('results/mlm') == False:
+        os.makedirs('results/mlm')
+
     with open(f'results/mlm/{args.dataset}/{args.outfile}', 'w+') as out:
         json.dump(vanilla_lambda_lists, out)
     

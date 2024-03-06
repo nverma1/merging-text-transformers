@@ -19,8 +19,8 @@ for task in mnli qqp qnli sst2 cola stsb mrpc rte; do
         seed1=${pairs_1[$i]}
 
         # small data because this is just vanilla merging
-        python -m language_evaluation_scripts.merge_bert_classifiers --cfg bert_classifier --task $task --seed0 $seed0 --seed1 $seed1 --train-frac 0.001 --bsz 8 --special-toks --permute-heads --no-absval --merge-type $type --merging-fn match_tensors_identity --exp-name ${task}_vanilla_merge
+        python -m experiment.merge_bert_classifiers --cfg bert_classifier --task $task --seed0 $seed0 --seed1 $seed1 --train-frac 0.001 --bsz 8 --special-toks --permute-heads --no-absval --merge-type $type --merging-fn match_tensors_identity --exp-name ${task}_vanilla_merge
 
-        python -m language_evaluation_scripts.merge_bert_classifiers --cfg bert_classifier --task $task --seed0 $seed0 --seed1 $seed1 --train-frac ${train_frac} --bsz 8 --special-toks --no-absval --permute-heads --exp-name  ${task}_permute_${type}_frac${train_frac} --merge-type $type --merging-fn match_tensors_permute
+        python -m experiment.merge_bert_classifiers --cfg bert_classifier --task $task --seed0 $seed0 --seed1 $seed1 --train-frac ${train_frac} --bsz 8 --special-toks --no-absval --permute-heads --exp-name  ${task}_permute_${type}_frac${train_frac} --merge-type $type --merging-fn match_tensors_permute
     done
 done
