@@ -1,6 +1,8 @@
 # Merging Text Transformer Models from Different Initializations
 
-This repository contains the code for the paper _[Merging Text Transformer Models from Different Initializations](https://arxiv.org/pdf/2403.00986.pdf)_ by [Neha Verma](https://nverma1.github.io/) and [Maha Elbayad](https://elbayadm.github.io/). 
+This repository contains the code for the paper **[Merging Text Transformer Models from Different Initializations](https://arxiv.org/pdf/2403.00986.pdf)** by [Neha Verma](https://nverma1.github.io/) and [Maha Elbayad](https://elbayadm.github.io/).
+
+![Perm Figure](overview.png)
 
 ## Getting Started
 
