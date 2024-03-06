@@ -1,0 +1,9 @@
+tqdm
+transformers
+datasets
+torch
+numpy
+networkx
+matplotlib
+scipy
+pytorch-nlp
