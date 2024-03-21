@@ -1,7 +1,5 @@
 # Merging Text Transformer Models from Different Initializations
 
-This repository contains the code for the paper **[Merging Text Transformer Models from Different Initializations](https://arxiv.org/pdf/2403.00986.pdf)** by [Neha Verma](https://nverma1.github.io/) and [Maha Elbayad](https://elbayadm.github.io/).
-
 ![Perm Figure](overview.png)
 
 ## Getting Started
@@ -85,18 +83,7 @@ python evaluation/graphing_mlm.py --path $PATH_TO_MERGED_MODELS --merge-type $ME
 where merge-type is one of the merge types in ``[res_only, attn_only, ff_only, ff+attn, res+attn, ff+res, all]`` and train-frac is the fraction of the training data used in the MLM experiments.
 If a permutation was applied to the output projection, pass the relevant ``--unmerge`` flag to the command.
 
-## Citation
 
-If you use this code, please cite our paper:
-
-```
-@article{verma2024merging,
-    title={Merging Text Transformer Models from Different Initializations},
-    author={Neha Verma and Maha Elbayad},
-    journal={arXiv},
-    year={2024},
-}
-```
 
 ### Acknowledgements
 
