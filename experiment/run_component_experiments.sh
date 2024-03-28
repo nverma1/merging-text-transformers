@@ -11,7 +11,11 @@ cd ../
 
 # identity permutation = vanilla merging.
 # we use a very small train fraction to speed up the experiments as no data is needed here
-python -m experiment.merge_bert_classifiers --cfg bert_books --task mlm --seed0 $seed0 --seed1 $seed1 --train-frac 0.0001 --bsz 8 --special-toks --permute-heads --no-absval --merge-type ff+attn --merging-fn match_tensors_identity --exp-name vanilla_merge
+for i in 0 1 2 3 4 5 6 7 8 9; do
+    seed0=${pairs_0[$i]}
+    seed1=${pairs_1[$i]}
+    python -m experiment.merge_bert_classifiers --cfg bert_books --task mlm --seed0 $seed0 --seed1 $seed1 --train-frac 0.0001 --bsz 8 --special-toks --permute-heads --no-absval --merge-type ff+attn --merging-fn match_tensors_identity --exp-name vanilla_merge
+done
 
 # by component
 train_frac=0.1
