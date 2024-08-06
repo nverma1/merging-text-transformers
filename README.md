@@ -28,7 +28,7 @@ python sample_books_corpus.py $PATH_TO_BOOKS_CORPUS
 
 ### Obtaining Models  
 
-We use several models from the [MultiBERTs](https://openreview.net/pdf?id=K0E_F0gFDgA) reproductions, accessible on [HuggingFace]((https://huggingface.co/) via the ``google/multiberts-seed_i`` paths, where ``i`` is the seed number. We also fine-tune these models on the GLUE benchmark for additional experiments, using the HuggingFace library. To fine-tune these models, run the following command:
+We use several models from the [MultiBERTs](https://openreview.net/pdf?id=K0E_F0gFDgA) reproductions, accessible on [HuggingFace](https://huggingface.co/google/multiberts-seed_1) via the ``google/multiberts-seed_i`` paths, where ``i`` is the seed number. We also fine-tune these models on the GLUE benchmark for additional experiments, using the HuggingFace library. To fine-tune these models, run the following command:
 
 ```
 bash training/finetune_glue.sh $seed_index $task
