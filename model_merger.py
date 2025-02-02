@@ -176,7 +176,7 @@ class ModelMerge(nn.Module):
                     if type(numel_local) != int:
                         numel_local = numel_local.item()
                     if special_toks == False:
-                        numel_local =- 2*x.shape[0] # num tokens - BOS/EOS toks 
+                        numel_local -= 2*x.shape[0] # num tokens - BOS/EOS toks 
                 numel += numel_local
                     
                 # get intermediates and remove padding idxs 
@@ -266,7 +266,7 @@ class ModelMerge(nn.Module):
                 else:
                     numel_local =  sum(lens)
                     if special_toks == False:
-                        numel_local =- 2*x.shape[0] # num tokens - BOS/EOS toks 
+                        numel_local -= 2*x.shape[0] # num tokens - BOS/EOS toks 
                 numel += numel_local
                     
                 # get intermediates and remove padding idxs 
